@@ -14,22 +14,39 @@ To be able to use image slider, below import statement must be used
 
 ```ets
 //import statement
+import { ImageSlider ,ImageSliderModel
+}  from "@ohos/imageslider"
 ```
+![imageslider](https://user-images.githubusercontent.com/84433855/177676137-a2f8a81d-b49c-47b3-9a57-0078b7f7a9f7.png)
 
-Access image slider attributes through a object of imageSliderModel and customize the image slider(if needed) using setter functions as
-shown and finally pass the object to ImageSlider .
+Access image slider attributes through a object of ImageSliderModel and customize the image slider(if needed) using setter functions as
+shown and finally pass the object along with the array of image resources to ImageSlider .
 
 ## how to use image slider
 ```ets
 //Creating object
+  private ImageSliderModel1: ImageSliderModel = new ImageSliderModel();
+//array of image resources
+  private img: ResourceStr[] = [$r("app.media.img1"),$r("app.media.img2"),$r("app.media.img3"),$r("app.media.img4"),$r("app.media.img5")]
 ```
 ```ets
 //Customization
 aboutToAppear(){
-}
+      this.ImageSliderModel1.setBlockColor("#ffffff")
+      this.ImageSliderModel1.setTrackColor("#000000")
+      this.ImageSliderModel1.setSelectedColor("#587687")
+      this.ImageSliderModel1.setShowSteps(false)
+      this.ImageSliderModel1.setNumberOfItems(this.img.length)
+  }
 ```
 ```ets
-//Passing Customized/Non-customized object to MaterialSnackBar
+//Passing Customized/Non-customized object to ImageSlider along with the array of image resources
+ImageSlider(
+        {
+          obj : this.ImageSliderModel1,
+          img : this.img
+        }
+      )
 ```
 
 ## Compatibility
