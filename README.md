@@ -1,12 +1,17 @@
 # ImageSlider
 
-Material component image slider in OpenHarmony.
+UI component image slider in OpenHarmony.
 
 ## Download & Install
 
 Install using npm
 
 ```npm i @ohos/imageslider```
+
+![imageslider](https://user-images.githubusercontent.com/84433855/177676137-a2f8a81d-b49c-47b3-9a57-0078b7f7a9f7.png)
+
+Access image slider attributes through a object of ImageSliderModel and customize the image slider(if needed) using setter functions as
+shown and finally pass the object along with the array of image resources to ImageSlider .
 
 ## Usage Instructions
 
@@ -17,11 +22,6 @@ To be able to use image slider, below import statement must be used
 import { ImageSlider ,ImageSliderModel
 }  from "@ohos/imageslider"
 ```
-![imageslider](https://user-images.githubusercontent.com/84433855/177676137-a2f8a81d-b49c-47b3-9a57-0078b7f7a9f7.png)
-
-Access image slider attributes through a object of ImageSliderModel and customize the image slider(if needed) using setter functions as
-shown and finally pass the object along with the array of image resources to ImageSlider .
-
 ## how to use image slider
 ```ets
 //Creating object
