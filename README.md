@@ -7,6 +7,7 @@ UI component image slider in OpenHarmony.
 Install using npm
 
 ```npm i @ohos/imageslider```
+## Image slider design
 
 ![imageslider](https://user-images.githubusercontent.com/84433855/177676137-a2f8a81d-b49c-47b3-9a57-0078b7f7a9f7.png)
 
